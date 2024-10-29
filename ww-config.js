@@ -7,10 +7,9 @@ export default {
     },
     editor: {
         label: {
-            en: 'Trigger',
-            fr: 'Déclencheur',
+            en: 'Overlay',
+            fr: 'Overlay',
         },
-        icon: 'cursor-click',
         infoTags: () => {
             return [];
         },
@@ -19,16 +18,7 @@ export default {
         },
     },
     states: ['focus', 'disabled'],
-    triggerEvents: [
-        {
-            name: 'change',
-            label: {
-                en: 'On value change',
-                fr: 'Changement de valeur',
-            },
-            event: null,
-        },
-    ],
+    triggerEvents: [],
     properties: {
         clickOpens: {
             type: 'OnOff',
