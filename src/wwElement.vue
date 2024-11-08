@@ -1,16 +1,27 @@
 <template>
-    <div @click="closeDialog()" />
+    <div @click="handleClick()" />
 </template>
 
 <script>
-import { inject } from 'vue';
+import { inject, toRef } from 'vue';
 
 export default {
+    props: {
+        content: { type: Object, required: true },
+    },
     emits: ['trigger-event'],
-    setup() {
+    setup(props) {
+        const clickCloses = toRef(() => props.content.clickCloses);
         const { closeDialog } = inject('weweb-assets/ww-dialog-root');
+
+        function handleClick() {
+            if (clickCloses.value) {
+                closeDialog();
+            }
+        }
+
         return {
-            closeDialog,
+            handleClick,
         };
     },
 };

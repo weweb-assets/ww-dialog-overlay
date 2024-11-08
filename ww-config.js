@@ -20,11 +20,11 @@ export default {
     states: ['focus', 'disabled'],
     triggerEvents: [],
     properties: {
-        clickOpens: {
+        clickCloses: {
             type: 'OnOff',
             label: {
-                en: 'Click opens',
-                fr: 'Ouverture au clic',
+                en: 'Click closes',
+                fr: 'Fermeture au clic',
             },
             section: 'settings',
             defaultValue: true,
@@ -32,8 +32,7 @@ export default {
             /* wwEditor:start */
             bindingValidation: {
                 type: 'boolean',
-                tooltip:
-                    'You can disable the whole trigger to open the Dialog. For example, if you want to open it with a smaller icon or button inside the trigger.',
+                tooltip: 'You can prevent the dialog from closing when the user clicks the overlay.',
             },
             /* wwEditor:end */
         },
