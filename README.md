@@ -1,4 +1,4 @@
-# WW-DIALOG-TRIGGER
+# WW-DIALOG-OVERLAY
 
 This is an element for Weweb, to display a button with a rich text editor.
 
